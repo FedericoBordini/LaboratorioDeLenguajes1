@@ -14,10 +14,11 @@ public class VentanaTest {
         ventana.setVisible(true);
         ventana.setVisible(true); */
 
-        //MiVentana miVentana = new MiVentana();
-        //miVentana.setVisible(true);
+        MiVentana miVentana = new MiVentana();
+        miVentana.setVisible(true);
 
         MiVentana miVentanaDos = new MiVentana("prueba ventana dos", 700, 200);
+        miVentanaDos.setVisible(true);
     }
 }
 
