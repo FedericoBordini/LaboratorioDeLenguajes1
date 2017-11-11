@@ -25,7 +25,10 @@ public class MiVentana extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = getContentPane();
-        contentPane.setLayout(new FlowLayout());
+        FlowLayout flowLayout = new FlowLayout(FlowLayout.RIGHT);
+        flowLayout.setHgap(50);
+        flowLayout.setVgap(10);
+        contentPane.setLayout(flowLayout);
 
         JLabel label = new JLabel("Nombre");
         JTextField textField = new JTextField(20);
