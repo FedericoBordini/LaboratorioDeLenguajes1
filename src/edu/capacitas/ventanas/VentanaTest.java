@@ -14,7 +14,7 @@ public class VentanaTest {
         ventana.setVisible(true);
         ventana.setVisible(true); */
 
-        MiVentanaDos miVentana = new MiVentanaDos();
+        MiVentana3 miVentana = new MiVentana3();
         miVentana.setVisible(true);
 
         //MiVentana miVentanaDos = new MiVentana("prueba ventana dos", 700, 200);
