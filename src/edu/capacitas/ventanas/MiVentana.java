@@ -3,12 +3,16 @@ package edu.capacitas.ventanas;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MiVentana extends JFrame {
 
+    private JTextField textField;
+
     public MiVentana() {
         super("Titutlo de mi ventana desde el constructor");
-        setSize(400, 500);
+        setSize(600, 200);
         initComponent();
 
     }
@@ -31,11 +35,21 @@ public class MiVentana extends JFrame {
         contentPane.setLayout(flowLayout);
 
         JLabel label = new JLabel("Nombre");
-        JTextField textField = new JTextField(20);
+        textField = new JTextField(20);
         JButton button = new JButton("Saludar");
+        button.addActionListener(new EventoSaludo2());
 
         contentPane.add(label);
         contentPane.add(textField);
         contentPane.add(button);
+    }
+
+    class EventoSaludo2 implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(null, "Hola " + textField.getText() + "!!");
+
+        }
     }
 }
